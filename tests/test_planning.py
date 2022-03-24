@@ -1,4 +1,3 @@
-
 from crgm.planning import do_plan
 from tests.fsa_goal_model import get_model
 
