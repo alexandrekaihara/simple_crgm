@@ -36,6 +36,9 @@ class fsa_model(Enum):
                   type=RType.AND,
                   children=[g1]))
 
+    p12 = LeafTask("Get constraints")
+    p13 = LeafTask("Choose filling station")
+    g4 = Goal("Decide more convenient", refinement=Refinement(type=RType.AND, children=[p12,p13]))
 
 def get_model():
     model_inst = SimpleNamespace()
@@ -45,3 +48,4 @@ def get_model():
         setattr(model_inst, enum_item.name,
                 enum_item.value)    # set in the model
     return model_inst
+
