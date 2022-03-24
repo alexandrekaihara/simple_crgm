@@ -7,7 +7,7 @@ model = get_model()
 
 def test_planning_or_with_valid_context_tasks():
     plan = do_plan(initial_node=model.g1, context_state=[model.c1])
-    assert plan == [model.p1]
+    assert plan == [model.p1] 
 
 
 def test_planning_or_with_alternative_tasks():
